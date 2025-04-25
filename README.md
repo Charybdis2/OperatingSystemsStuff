@@ -1,7 +1,7 @@
 # OperatingSystemsStuff
 
 ## Added Petersons Solution 
-
+```c
 volatile bool flag[2] = {false, false};  // This is the intent of both processes. I.E when true they want to enter the critical section
 volatile int turn = 0; // Which processes' turn it is
 
@@ -15,5 +15,5 @@ void enter_critical_section(int self) { // self if the process. I didn't bother 
 void exit_critical_section(int self) {
     flag[self] = false;
 }
-
+```
 This program ensures mutual exclusion.
